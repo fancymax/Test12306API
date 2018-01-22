@@ -11,25 +11,31 @@ import JavaScriptCore
 
 public class WebAPI: NSObject {
     
-    var xmlRequest:XMLHttpRequest!
-    var context = JSContext()!
+    private lazy var xmlRequest:XMLHttpRequest! = {
+        return XMLHttpRequest()
+    }()
+    
+    private lazy var context:JSContext = {
+        return JSContext()
+    }()
     
     override public init() {
+        super.init()
+        
         let jsPath = Bundle(for: WebAPI.self).path(forResource: "WebAPI", ofType: "js")!
         let jsContent = try! String(contentsOfFile: jsPath)
         
         let block:@convention(block) (String) -> () = { info in
-            Swift.print(info)
+            print(info)
         }
         
         context.setObject(block, forKeyedSubscript:"log" as NSCopying & NSObjectProtocol)
         context.setObject(QueryLeftNewDTO.self, forKeyedSubscript: "QueryLeftNewDTO" as NSCopying & NSObjectProtocol)
         
         context.exceptionHandler = { context, error in
-            Swift.print(error)
+            print(error)
         }
         
-        xmlRequest = XMLHttpRequest()
         xmlRequest.extend(context)
         context.evaluateScript(jsContent)
     }
