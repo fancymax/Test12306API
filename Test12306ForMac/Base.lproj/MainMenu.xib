@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Test12306ForMac" customModuleProvider="target">
             <connections>
+                <outlet property="ticketTableView" destination="ZKn-vR-Bse" id="Jyd-6E-8NM"/>
                 <outlet property="window" destination="Fhj-il-XID" id="smC-Ln-jvb"/>
             </connections>
         </customObject>
@@ -679,7 +680,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="testExportJSSwift" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="Fhj-il-XID">
+        <window title="Demo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="Fhj-il-XID">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="460" height="480"/>
@@ -738,6 +739,9 @@
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="8cz-iX-wto" name="value" keyPath="objectValue.train_code" id="Bwh-30-h7j"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <connections>
@@ -780,6 +784,10 @@
                                             </prototypeCellViews>
                                         </tableColumn>
                                     </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="Voe-Tx-rLC" id="PDC-sm-CCF"/>
+                                        <outlet property="delegate" destination="Voe-Tx-rLC" id="90W-Mr-sle"/>
+                                    </connections>
                                 </tableView>
                             </subviews>
                         </clipView>

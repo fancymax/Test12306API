@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		111C4AC62015B13C00722075 /* WebAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1140B01A2015918900C623B9 /* WebAPI.framework */; };
 		111C4AC72015B15400722075 /* WebAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1140B01A2015918900C623B9 /* WebAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		111C4AC92015B92600722075 /* QueryLeftNewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C4AC82015B92600722075 /* QueryLeftNewDTO.swift */; };
 		1140B0082015913200C623B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140B0072015913200C623B9 /* AppDelegate.swift */; };
 		1140B00A2015913200C623B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1140B0092015913200C623B9 /* Assets.xcassets */; };
 		1140B00D2015913200C623B9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1140B00B2015913200C623B9 /* MainMenu.xib */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		111C4AC82015B92600722075 /* QueryLeftNewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLeftNewDTO.swift; sourceTree = "<group>"; };
 		1140B0042015913200C623B9 /* Test12306ForMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test12306ForMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1140B0072015913200C623B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1140B0092015913200C623B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				1140B038201593AD00C623B9 /* Supporting Files */,
 				11B85B442015970E00993B82 /* WebAPI.swift */,
+				111C4AC82015B92600722075 /* QueryLeftNewDTO.swift */,
 				1140B0372015922100C623B9 /* WebAPI.js */,
 				1140B0362015922100C623B9 /* XMLHTTPRequest.h */,
 				1140B0352015922100C623B9 /* XMLHTTPRequest.m */,
@@ -375,6 +378,7 @@
 			files = (
 				11B85B452015970E00993B82 /* WebAPI.swift in Sources */,
 				11B85B472015977000993B82 /* XMLHTTPRequest.m in Sources */,
+				111C4AC92015B92600722075 /* QueryLeftNewDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

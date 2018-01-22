@@ -23,6 +23,7 @@ public class WebAPI: NSObject {
         }
         
         context.setObject(block, forKeyedSubscript:"log" as NSCopying & NSObjectProtocol)
+        context.setObject(QueryLeftNewDTO.self, forKeyedSubscript: "QueryLeftNewDTO" as NSCopying & NSObjectProtocol)
         
         context.exceptionHandler = { context, error in
             Swift.print(error)
@@ -33,8 +34,12 @@ public class WebAPI: NSObject {
         context.evaluateScript(jsContent)
     }
     
-    public func queryTicketFlow() {
+    public func queryTicketFlow() -> [QueryLeftNewDTO]? {
         let queryTicket = context.objectForKeyedSubscript("queryTicketFlow")
-        queryTicket?.call(withArguments: [])
+        if let tickets = queryTicket?.call(withArguments: []).toArray() as? [QueryLeftNewDTO] {
+            return tickets
+        }
+        
+        return nil
     }
 }
