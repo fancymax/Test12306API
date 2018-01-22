@@ -23,10 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func clickTest(_ sender: Any) {
         if let webTickets = webAPI.queryTicketFlow() {
             self.tickets = webTickets
-            Swift.print(tickets)
-            
             ticketTableView.reloadData()
-            
         }
     }
     
@@ -46,8 +43,6 @@ extension AppDelegate:NSTableViewDataSource {
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         return tickets![row]
     }
-    
-    
     
 }
 

@@ -740,7 +740,7 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <connections>
-                                                                <binding destination="8cz-iX-wto" name="value" keyPath="objectValue.train_code" id="Bwh-30-h7j"/>
+                                                                <binding destination="8cz-iX-wto" name="value" keyPath="objectValue.station_train_code" id="HOb-xA-XCL"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
@@ -751,7 +751,7 @@
                                             </prototypeCellViews>
                                         </tableColumn>
                                         <tableColumn identifier="" width="296" minWidth="40" maxWidth="1000" id="005-FJ-xZH">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="余票">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="二等座">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -775,6 +775,9 @@
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="LMZ-5W-htL" name="value" keyPath="objectValue.ze_num" id="zJ8-bA-rRR"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <connections>

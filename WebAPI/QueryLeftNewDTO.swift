@@ -31,56 +31,150 @@ enum TicketOrder:String {
 }
 
 @objc protocol QueryLeftNewDTOJSExport:JSExport {
+    var secretHBStr:String{get set}
+    var secretStr:String{get set}
+    var buttonTextInfo:String {get set}
+    
     var train_no:String {get set}
-    var train_code:String {get set}
+    var station_train_code:String {get set}
+    var start_station_telecode:String {get set}
+    var end_station_telecode:String {get set}
+    var from_station_telecode:String {get set}
+    var to_station_telecode:String {get set}
+    
+    var start_time :String{get set}
+    var arrive_time :String{get set}
+    var lishi :String {get set}
+    var canWebBuy: String {get set}
+    var yp_info:String {get set}
+    var start_train_date :String {get set}
+    var train_seat_feature :String {get set}
+    var location_code:String {get set}
+    var from_station_no :String {get set}
+    var to_station_no :String {get set}
+    var is_support_card :String {get set}
+    var controlled_train_flag :String {get set}
+    var gg_num :String {get set}
+    var gr_num :String {get set}
+    var qt_num :String {get set}
+    var rw_num :String {get set}
+    var rz_num :String {get set}
+    var tz_num :String {get set}
+    var wz_num :String {get set}
+    var yb_num :String {get set}
+    var yw_num :String {get set}
+    var yz_num :String {get set}
+    var ze_num :String {get set}
+    var zy_num :String {get set}
+    var swz_num :String {get set}
+    var srrb_num :String {get set}
+    var yp_ex :String {get set}
+    var seat_types :String {get set}
+    var exchange_train_flag :String {get set}
+    var from_station_name :String {get set}
+    var to_station_name :String {get set}
     
     static func createNew() -> QueryLeftNewDTO
 }
 
 public class QueryLeftNewDTO:NSObject, QueryLeftNewDTOJSExport{
-    override init() {
-//        super.init()
-        self.train_no = ""
-        self.train_code = ""
+    
+    dynamic var secretHBStr: String
+    dynamic var secretStr: String
+    dynamic var buttonTextInfo: String 
+    dynamic var train_no: String 
+    dynamic var station_train_code: String 
+    dynamic var start_station_telecode: String 
+    dynamic var end_station_telecode: String
+    dynamic var from_station_telecode: String
+    dynamic var to_station_telecode: String
+    dynamic var start_time: String
+    dynamic var arrive_time: String
+    dynamic var lishi: String
+    dynamic var canWebBuy: String
+    dynamic var yp_info: String
+    dynamic var start_train_date: String
+    dynamic var train_seat_feature: String
+    dynamic var location_code: String
+    dynamic var from_station_no: String
+    dynamic var to_station_no: String
+    dynamic var is_support_card: String
+    dynamic var controlled_train_flag: String 
+    dynamic var gg_num: String 
+    dynamic var gr_num: String 
+    dynamic var qt_num: String 
+    dynamic var rw_num: String 
+    dynamic var rz_num: String 
+    dynamic var tz_num: String
+    dynamic var wz_num: String
+    dynamic var yb_num: String
+    dynamic var yw_num: String
+    dynamic var yz_num: String
+    dynamic var zy_num: String
+    dynamic var ze_num: String 
+    dynamic var swz_num: String
+    dynamic var srrb_num: String
+    dynamic var yp_ex: String
+    dynamic var seat_types: String
+    dynamic var exchange_train_flag: String
+    dynamic var from_station_name: String
+    dynamic var to_station_name: String
+    
+    public override init() {
+        secretHBStr = "";
+        secretStr = "";
+        buttonTextInfo = "";
+        train_no = "";
+        station_train_code = "";
+        start_station_telecode = "";
+        end_station_telecode = "";
+        from_station_telecode = "";
+        to_station_telecode = "";
+        start_time = "";
+        arrive_time = "";
+        lishi = "";
+        canWebBuy = "";
+        yp_info = "";
+        start_train_date = "";
+        train_seat_feature = "";
+        location_code = "";
+        from_station_no = "";
+        to_station_no = "";
+        is_support_card = "";
+        controlled_train_flag = "";
+        gg_num = "";
+        gr_num = "";
+        qt_num = "";
+        rw_num = "";
+        rz_num = "";
+        tz_num = "";
+        wz_num = "";
+        yb_num = "";
+        yw_num = "";
+        yz_num = "";
+        zy_num = "";
+        ze_num = "";
+        swz_num = "";
+        srrb_num = "";
+        yp_ex = "";
+        seat_types = "";
+        exchange_train_flag = "";
+        from_station_name = "";
+        to_station_name = "";
     }
     
     static func createNew() -> QueryLeftNewDTO {
         return QueryLeftNewDTO()
     }
 
-// MARK: JSON Property
-    dynamic var train_no:String
-    dynamic var train_code: String
-//    let start_station_telecode:String!
-//
-//    let end_station_telecode:String!
-//
-//    let FromStationCode:String!
-//    let FromStationName:String!
-//
-//    let ToStationName:String!
-//    let ToStationCode:String!
-//
-//    let start_time:String!
-//    let arrive_time:String!
 //
 //    //"12:01"
 //    let lishi:String!
 //    //"Y"  "IS_TIME_NOT_BUY"预售期未到/系统维护时间
 //    let canWebBuy:String?
 //
-//    let yp_info:String?
-//    let start_train_date:String!
-//    let controlled_train_flag:String?
-//
 //    //"yp_ex":"O0M0O0"
 //    let yp_ex:String?
-//    let train_seat_feature:String?
-//    let seat_types:String?
-//    let location_code:String?
-//    let from_station_no:String?
-//    let to_station_no:String?
-//    let is_support_card:String?
 //    //标识符
 //    var SecretStr:String?
 //    //票务描述
@@ -111,7 +205,7 @@ public class QueryLeftNewDTO:NSObject, QueryLeftNewDTOJSExport{
 //    let Zy_Num:String!
 //    //商务座
 //    let Swz_Num:String!
-//
+    
 //// MARK: Custom Property
 //    var seatTypePairDic = [String:SeatTypePair]()
 //
@@ -224,53 +318,6 @@ public class QueryLeftNewDTO:NSObject, QueryLeftNewDTOJSExport{
     
 //    init(json:JSON, map:JSON, dateStr:String)
 //    {
-//        let paramStr = json.rawString()!
-//        let params = paramStr.components(separatedBy: "|")
-//
-//        SecretStr = params[0]
-//        if SecretStr != nil{
-//            SecretStr = SecretStr!.removingPercentEncoding
-//        }
-//        buttonTextInfo = params[1]
-//        train_no = params[2]
-//        TrainCode = params[3]
-//        start_station_telecode = params[4]
-//        end_station_telecode = params[5]
-//        FromStationCode = params[6]
-//        ToStationCode = params[7]
-//        start_time = params[8]
-//        arrive_time = params[9]
-//        lishi = params[10]
-//        canWebBuy = params[11]
-//        yp_info = params[12]
-//        start_train_date = params[13]
-//        train_seat_feature = params[14]
-//        location_code = params[15]
-//        from_station_no = params[16]
-//        to_station_no = params[17]
-//        is_support_card = params[18]
-//        controlled_train_flag = params[19]
-//
-//        Gg_Num = params[20]
-//        Gr_Num = params[21]
-//        Qt_Num = params[22]
-//        Rw_Num = params[23]
-//        Rz_Num = params[24]
-//        Tz_Num = params[25]
-//        Wz_Num = params[26]
-//        Yb_Num = params[27]
-//        Yw_Num = params[28]
-//        Yz_Num = params[29]
-//        Ze_Num = params[30]
-//        Zy_Num = params[31]
-//        Swz_Num = params[32]
-//
-//        yp_ex = params[33]
-//        seat_types = params[34]
-//
-//        FromStationName = map[FromStationCode].stringValue
-//        ToStationName = map[ToStationCode].stringValue
-//
 //        isStartStation = (FromStationCode == start_station_telecode)
 //        isEndStation = (ToStationCode == end_station_telecode)
 //

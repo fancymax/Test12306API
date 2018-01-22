@@ -40,7 +40,7 @@ function setCookie() {
     log(cookieValue)
 }
 
-function getCookieValue(searchKey,headers) {
+function getCookieValue(searchKey, headers) {
     let regex = new RegExp(searchKey);
     let cookie = regex.exec(headers);
     if (cookie === null) {
@@ -76,18 +76,18 @@ function leftTicket_init() {
         log(dynamicJs);
 
         let headers = request.getAllResponseHeaders();
-        var cookieValue = getCookieValue("JSESSIONID=([^;]+)",headers);
+        var cookieValue = getCookieValue("JSESSIONID=([^;]+)", headers);
         if ((cookieValue !== null) && (cookieValue !== undefined)) {
             JSESSIONID = cookieValue;
         }
 
-        cookieValue = getCookieValue("route=([^;]+)",headers);
-        if ((cookieValue !== null) && (cookieValue !== undefined)){
+        cookieValue = getCookieValue("route=([^;]+)", headers);
+        if ((cookieValue !== null) && (cookieValue !== undefined)) {
             route = cookieValue;
         }
 
-        cookieValue = getCookieValue("BIGipServerotn=([^;]+)",headers);
-        if ((cookieValue !== null) &&(cookieValue !== undefined)){
+        cookieValue = getCookieValue("BIGipServerotn=([^;]+)", headers);
+        if ((cookieValue !== null) && (cookieValue !== undefined)) {
             BIGipServerotn = cookieValue;
         }
 
@@ -136,12 +136,7 @@ function leftTicket_Query(url) {
     waitForResult();
     if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
         let json = JSON.parse(request.responseText);
-        // log(request.responseText);
-        // log(json.data.result);
-        // log(json.data.map);
-        let tickets = parseTickets(json.data.result,json.data.map);
-
-        return convertTickets(tickets)
+        return parseTickets(json.data.result, json.data.map);
     }
 }
 
@@ -151,8 +146,9 @@ function convertTickets(tickets) {
     for (let i = 0; i < tickets.length; i++) {
         let dto = QueryLeftNewDTO.createNew();
         dto.train_no = tickets[i].queryLeftNewDTO.train_no;
-        dto.train_code = tickets[i].queryLeftNewDTO.station_train_code;
-        
+        dto.station_train_code = tickets[i].queryLeftNewDTO.station_train_code;
+        dto.ze_num = tickets[i].queryLeftNewDTO.ze_num;
+
         dtos.push(dto);
     }
 
@@ -170,8 +166,6 @@ function parseTickets(result, map) {
         var cu = [];
         cu.train_no = cq[2];
         cu.station_train_code = cq[3];
-
-//        log(cu.station_train_code);
 
         cu.start_station_telecode = cq[4];
         cu.end_station_telecode = cq[5];
@@ -231,7 +225,9 @@ function queryTicketFlow() {
     }
 
     let queryUrl = 'https://kyfw.12306.cn/otn/' + res.leftUrl + '?' + params;
-    return leftTicket_Query(queryUrl);
+    let tickets = leftTicket_Query(queryUrl);
+    
+    return convertTickets(tickets)
 }
 
 
