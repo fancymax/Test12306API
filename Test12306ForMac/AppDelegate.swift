@@ -7,19 +7,21 @@
 //
 
 import Cocoa
+import WebAPI
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
+    
+    var webAPI:WebAPI!
 
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+    @IBAction func clickTest(_ sender: Any) {
+        webAPI.queryTicketFlow()
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        webAPI =  WebAPI()
     }
 
 

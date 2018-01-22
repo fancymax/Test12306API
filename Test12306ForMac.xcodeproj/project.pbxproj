@@ -7,10 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111C4AC62015B13C00722075 /* WebAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1140B01A2015918900C623B9 /* WebAPI.framework */; };
+		111C4AC72015B15400722075 /* WebAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1140B01A2015918900C623B9 /* WebAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1140B0082015913200C623B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140B0072015913200C623B9 /* AppDelegate.swift */; };
 		1140B00A2015913200C623B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1140B0092015913200C623B9 /* Assets.xcassets */; };
 		1140B00D2015913200C623B9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1140B00B2015913200C623B9 /* MainMenu.xib */; };
+		1140B01E2015918900C623B9 /* WebAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1140B01C2015918900C623B9 /* WebAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1140B0402015945400C623B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140B03F2015945400C623B9 /* AppDelegate.swift */; };
+		1140B0422015945400C623B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140B0412015945400C623B9 /* ViewController.swift */; };
+		1140B0452015945400C623B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1140B0432015945400C623B9 /* Main.storyboard */; };
+		1140B0472015945400C623B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1140B0462015945400C623B9 /* Assets.xcassets */; };
+		1140B04A2015945400C623B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1140B0482015945400C623B9 /* LaunchScreen.storyboard */; };
+		1140B051201594A800C623B9 /* XMLHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1140B0362015922100C623B9 /* XMLHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11B85B452015970E00993B82 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B85B442015970E00993B82 /* WebAPI.swift */; };
+		11B85B472015977000993B82 /* XMLHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1140B0352015922100C623B9 /* XMLHTTPRequest.m */; };
+		11B85B482015977E00993B82 /* WebAPI.js in Resources */ = {isa = PBXBuildFile; fileRef = 1140B0372015922100C623B9 /* WebAPI.js */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		111C4AC32015B12D00722075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1140AFFC2015913200C623B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1140B0192015918900C623B9;
+			remoteInfo = "WebAPI macOS";
+		};
+		1140B04F2015948500C623B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1140AFFC2015913200C623B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1140B02B201591B600C623B9;
+			remoteInfo = "WebAPI iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1140B0262015918900C623B9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				111C4AC72015B15400722075 /* WebAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1140B0042015913200C623B9 /* Test12306ForMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test12306ForMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,11 +61,47 @@
 		1140B0092015913200C623B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1140B00C2015913200C623B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1140B00E2015913200C623B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1140B00F2015913200C623B9 /* Test12306ForMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Test12306ForMac.entitlements; sourceTree = "<group>"; };
+		1140B01A2015918900C623B9 /* WebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1140B01C2015918900C623B9 /* WebAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebAPI.h; sourceTree = "<group>"; };
+		1140B01D2015918900C623B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1140B02C201591B600C623B9 /* WebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1140B0352015922100C623B9 /* XMLHTTPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLHTTPRequest.m; sourceTree = "<group>"; };
+		1140B0362015922100C623B9 /* XMLHTTPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLHTTPRequest.h; sourceTree = "<group>"; };
+		1140B0372015922100C623B9 /* WebAPI.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = WebAPI.js; sourceTree = "<group>"; };
+		1140B03D2015945400C623B9 /* Test12306ForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test12306ForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1140B03F2015945400C623B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1140B0412015945400C623B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1140B0442015945400C623B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1140B0462015945400C623B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1140B0492015945400C623B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1140B04B2015945400C623B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11B85B442015970E00993B82 /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1140B0012015913200C623B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111C4AC62015B13C00722075 /* WebAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1140B0162015918900C623B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1140B028201591B600C623B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1140B03A2015945400C623B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				1140B0062015913200C623B9 /* Test12306ForMac */,
+				1140B03E2015945400C623B9 /* Test12306ForiOS */,
+				1140B034201591CE00C623B9 /* WebAPI */,
 				1140B0052015913200C623B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				1140B0042015913200C623B9 /* Test12306ForMac.app */,
+				1140B01A2015918900C623B9 /* WebAPI.framework */,
+				1140B02C201591B600C623B9 /* WebAPI.framework */,
+				1140B03D2015945400C623B9 /* Test12306ForiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,12 +139,64 @@
 				1140B0092015913200C623B9 /* Assets.xcassets */,
 				1140B00B2015913200C623B9 /* MainMenu.xib */,
 				1140B00E2015913200C623B9 /* Info.plist */,
-				1140B00F2015913200C623B9 /* Test12306ForMac.entitlements */,
 			);
 			path = Test12306ForMac;
 			sourceTree = "<group>";
 		};
+		1140B034201591CE00C623B9 /* WebAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1140B038201593AD00C623B9 /* Supporting Files */,
+				11B85B442015970E00993B82 /* WebAPI.swift */,
+				1140B0372015922100C623B9 /* WebAPI.js */,
+				1140B0362015922100C623B9 /* XMLHTTPRequest.h */,
+				1140B0352015922100C623B9 /* XMLHTTPRequest.m */,
+			);
+			path = WebAPI;
+			sourceTree = "<group>";
+		};
+		1140B038201593AD00C623B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1140B01C2015918900C623B9 /* WebAPI.h */,
+				1140B01D2015918900C623B9 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1140B03E2015945400C623B9 /* Test12306ForiOS */ = {
+			isa = PBXGroup;
+			children = (
+				1140B03F2015945400C623B9 /* AppDelegate.swift */,
+				1140B0412015945400C623B9 /* ViewController.swift */,
+				1140B0432015945400C623B9 /* Main.storyboard */,
+				1140B0462015945400C623B9 /* Assets.xcassets */,
+				1140B0482015945400C623B9 /* LaunchScreen.storyboard */,
+				1140B04B2015945400C623B9 /* Info.plist */,
+			);
+			path = Test12306ForiOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1140B0172015918900C623B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1140B01E2015918900C623B9 /* WebAPI.h in Headers */,
+				1140B051201594A800C623B9 /* XMLHTTPRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1140B029201591B600C623B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1140B0032015913200C623B9 /* Test12306ForMac */ = {
@@ -70,14 +206,70 @@
 				1140B0002015913200C623B9 /* Sources */,
 				1140B0012015913200C623B9 /* Frameworks */,
 				1140B0022015913200C623B9 /* Resources */,
+				1140B0262015918900C623B9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				111C4AC42015B12D00722075 /* PBXTargetDependency */,
+			);
+			name = Test12306ForMac;
+			productName = Test12306ForMac;
+			productReference = 1140B0042015913200C623B9 /* Test12306ForMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1140B0192015918900C623B9 /* WebAPI macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1140B0232015918900C623B9 /* Build configuration list for PBXNativeTarget "WebAPI macOS" */;
+			buildPhases = (
+				1140B0152015918900C623B9 /* Sources */,
+				1140B0162015918900C623B9 /* Frameworks */,
+				1140B0172015918900C623B9 /* Headers */,
+				1140B0182015918900C623B9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Test12306ForMac;
-			productName = Test12306ForMac;
-			productReference = 1140B0042015913200C623B9 /* Test12306ForMac.app */;
+			name = "WebAPI macOS";
+			productName = "WebAPI macOS";
+			productReference = 1140B01A2015918900C623B9 /* WebAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1140B02B201591B600C623B9 /* WebAPI iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1140B031201591B600C623B9 /* Build configuration list for PBXNativeTarget "WebAPI iOS" */;
+			buildPhases = (
+				1140B027201591B600C623B9 /* Sources */,
+				1140B028201591B600C623B9 /* Frameworks */,
+				1140B029201591B600C623B9 /* Headers */,
+				1140B02A201591B600C623B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WebAPI iOS";
+			productName = "WebAPI iOS";
+			productReference = 1140B02C201591B600C623B9 /* WebAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1140B03C2015945400C623B9 /* Test12306ForiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1140B04C2015945400C623B9 /* Build configuration list for PBXNativeTarget "Test12306ForiOS" */;
+			buildPhases = (
+				1140B0392015945400C623B9 /* Sources */,
+				1140B03A2015945400C623B9 /* Frameworks */,
+				1140B03B2015945400C623B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1140B0502015948500C623B9 /* PBXTargetDependency */,
+			);
+			name = Test12306ForiOS;
+			productName = Test12306ForiOS;
+			productReference = 1140B03D2015945400C623B9 /* Test12306ForiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -91,6 +283,20 @@
 				ORGANIZATIONNAME = fancyApp;
 				TargetAttributes = {
 					1140B0032015913200C623B9 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					1140B0192015918900C623B9 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					1140B02B201591B600C623B9 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					1140B03C2015945400C623B9 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,6 +316,9 @@
 			projectRoot = "";
 			targets = (
 				1140B0032015913200C623B9 /* Test12306ForMac */,
+				1140B0192015918900C623B9 /* WebAPI macOS */,
+				1140B03C2015945400C623B9 /* Test12306ForiOS */,
+				1140B02B201591B600C623B9 /* WebAPI iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +333,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1140B0182015918900C623B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B85B482015977E00993B82 /* WebAPI.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1140B02A201591B600C623B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1140B03B2015945400C623B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1140B04A2015945400C623B9 /* LaunchScreen.storyboard in Resources */,
+				1140B0472015945400C623B9 /* Assets.xcassets in Resources */,
+				1140B0452015945400C623B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,7 +369,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1140B0152015918900C623B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B85B452015970E00993B82 /* WebAPI.swift in Sources */,
+				11B85B472015977000993B82 /* XMLHTTPRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1140B027201591B600C623B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1140B0392015945400C623B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1140B0422015945400C623B9 /* ViewController.swift in Sources */,
+				1140B0402015945400C623B9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		111C4AC42015B12D00722075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1140B0192015918900C623B9 /* WebAPI macOS */;
+			targetProxy = 111C4AC32015B12D00722075 /* PBXContainerItemProxy */;
+		};
+		1140B0502015948500C623B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1140B02B201591B600C623B9 /* WebAPI iOS */;
+			targetProxy = 1140B04F2015948500C623B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1140B00B2015913200C623B9 /* MainMenu.xib */ = {
@@ -144,6 +416,22 @@
 				1140B00C2015913200C623B9 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		1140B0432015945400C623B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1140B0442015945400C623B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1140B0482015945400C623B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1140B0492015945400C623B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -258,8 +546,10 @@
 		1140B0132015913200C623B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Test12306ForMac/Test12306ForMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Test12306ForMac/Info.plist;
@@ -273,8 +563,10 @@
 		1140B0142015913200C623B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Test12306ForMac/Test12306ForMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Test12306ForMac/Info.plist;
@@ -282,6 +574,148 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fancyApp.Test12306ForMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		1140B0242015918900C623B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "WebAPI/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fancyApp.WebAPI-macOS";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = WebAPI;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1140B0252015918900C623B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "WebAPI/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fancyApp.WebAPI-macOS";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = WebAPI;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1140B032201591B600C623B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "WebAPI/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fancyApp.WebAPI-iOS";
+				PRODUCT_NAME = WebAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1140B033201591B600C623B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "WebAPI/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fancyApp.WebAPI-iOS";
+				PRODUCT_NAME = WebAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1140B04D2015945400C623B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Test12306ForiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fancyApp.Test12306ForiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1140B04E2015945400C623B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Test12306ForiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fancyApp.Test12306ForiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -302,6 +736,33 @@
 			buildConfigurations = (
 				1140B0132015913200C623B9 /* Debug */,
 				1140B0142015913200C623B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1140B0232015918900C623B9 /* Build configuration list for PBXNativeTarget "WebAPI macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1140B0242015918900C623B9 /* Debug */,
+				1140B0252015918900C623B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1140B031201591B600C623B9 /* Build configuration list for PBXNativeTarget "WebAPI iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1140B032201591B600C623B9 /* Debug */,
+				1140B033201591B600C623B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1140B04C2015945400C623B9 /* Build configuration list for PBXNativeTarget "Test12306ForiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1140B04D2015945400C623B9 /* Debug */,
+				1140B04E2015945400C623B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
