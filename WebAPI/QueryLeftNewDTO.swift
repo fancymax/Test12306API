@@ -77,46 +77,46 @@ enum TicketOrder:String {
 
 public class QueryLeftNewDTO:NSObject, QueryLeftNewDTOJSExport{
     
-    dynamic var secretHBStr: String
-    dynamic var secretStr: String
-    dynamic var buttonTextInfo: String 
-    dynamic var train_no: String 
+    public dynamic var secretHBStr: String
+    public dynamic var secretStr: String
+    public dynamic var buttonTextInfo: String 
+    public dynamic var train_no: String 
     public dynamic var station_train_code: String 
-    dynamic var start_station_telecode: String 
-    dynamic var end_station_telecode: String
-    dynamic var from_station_telecode: String
-    dynamic var to_station_telecode: String
-    dynamic var start_time: String
-    dynamic var arrive_time: String
-    dynamic var lishi: String
-    dynamic var canWebBuy: String
-    dynamic var yp_info: String
-    dynamic var start_train_date: String
-    dynamic var train_seat_feature: String
-    dynamic var location_code: String
-    dynamic var from_station_no: String
-    dynamic var to_station_no: String
-    dynamic var is_support_card: String
-    dynamic var controlled_train_flag: String 
-    dynamic var gg_num: String 
-    dynamic var gr_num: String 
-    dynamic var qt_num: String 
-    dynamic var rw_num: String 
-    dynamic var rz_num: String 
-    dynamic var tz_num: String
-    dynamic var wz_num: String
-    dynamic var yb_num: String
-    dynamic var yw_num: String
-    dynamic var yz_num: String
-    dynamic var zy_num: String
-    dynamic var ze_num: String 
-    dynamic var swz_num: String
-    dynamic var srrb_num: String
-    dynamic var yp_ex: String
-    dynamic var seat_types: String
-    dynamic var exchange_train_flag: String
-    dynamic var from_station_name: String
-    dynamic var to_station_name: String
+    public dynamic var start_station_telecode: String 
+    public dynamic var end_station_telecode: String
+    public dynamic var from_station_telecode: String
+    public dynamic var to_station_telecode: String
+    public dynamic var start_time: String
+    public dynamic var arrive_time: String
+    public dynamic var lishi: String
+    public dynamic var canWebBuy: String
+    public dynamic var yp_info: String
+    public dynamic var start_train_date: String
+    public dynamic var train_seat_feature: String
+    public dynamic var location_code: String
+    public dynamic var from_station_no: String
+    public dynamic var to_station_no: String
+    public dynamic var is_support_card: String
+    public dynamic var controlled_train_flag: String 
+    public dynamic var gg_num: String 
+    public dynamic var gr_num: String 
+    public dynamic var qt_num: String 
+    public dynamic var rw_num: String 
+    public dynamic var rz_num: String 
+    public dynamic var tz_num: String
+    public dynamic var wz_num: String
+    public dynamic var yb_num: String
+    public dynamic var yw_num: String
+    public dynamic var yz_num: String
+    public dynamic var zy_num: String
+    public dynamic var ze_num: String 
+    public dynamic var swz_num: String
+    public dynamic var srrb_num: String
+    public dynamic var yp_ex: String
+    public dynamic var seat_types: String
+    public dynamic var exchange_train_flag: String
+    public dynamic var from_station_name: String
+    public dynamic var to_station_name: String
     
     public override init() {
         secretHBStr = "";

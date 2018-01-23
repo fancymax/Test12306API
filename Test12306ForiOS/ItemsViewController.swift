@@ -33,26 +33,12 @@ class ItemsViewController: UITableViewController {
         tableView.scrollIndicatorInsets = insets
     }
     
-    @IBAction func toggleEditingMode(_ sender:UIButton) {
-        
-        if isEditing {
-            sender.setTitle("Edit", for: .normal)
-            
-            setEditing(false, animated: true)
-        }
-        else {
-            sender.setTitle("Done", for: .normal)
-            setEditing(true, animated: true)
-        }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.tickets == nil {
             return 0
@@ -65,21 +51,8 @@ class ItemsViewController: UITableViewController {
         
         let item = self.tickets![indexPath.row]
         cell?.textLabel?.text = item.station_train_code
-//        cell?.detailTextLabel?.text = "$\(item.valueInDollars)"
+        cell?.detailTextLabel?.text = item.ze_num
         
         return cell!
-    }
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-//            let item = itemStore.allItems[indexPath.row]
-//            itemStore.removeItem(item)
-//
-//            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-//        itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
 }
