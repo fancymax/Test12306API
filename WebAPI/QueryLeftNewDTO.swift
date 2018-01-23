@@ -6,8 +6,6 @@
 //  Copyright (c) 2015年 fancy. All rights reserved.
 //
 
-import Cocoa
-
 struct SeatTypePair:CustomDebugStringConvertible {
     let seatName:String //无座
     let seatCode:String // 1
@@ -83,7 +81,7 @@ public class QueryLeftNewDTO:NSObject, QueryLeftNewDTOJSExport{
     dynamic var secretStr: String
     dynamic var buttonTextInfo: String 
     dynamic var train_no: String 
-    dynamic var station_train_code: String 
+    public dynamic var station_train_code: String 
     dynamic var start_station_telecode: String 
     dynamic var end_station_telecode: String
     dynamic var from_station_telecode: String

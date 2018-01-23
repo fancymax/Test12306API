@@ -6,8 +6,6 @@
 //  Copyright © 2018年 fancyApp. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 #import "XMLHTTPRequest.h"
 
 //! Project version number for WebAPI_macOS.
