@@ -12,14 +12,23 @@ import WebAPI
 class ItemsViewController: UITableViewController {
     
     var webAPI:WebAPI!
-    
     var tickets: [QueryLeftNewDTO]?
     
-    @IBAction func clickTest(_ sender: Any) {
-        if let webTickets = webAPI.queryTicketFlow() {
-            self.tickets = webTickets
+    @IBAction func clickQueryTicket(_ sender: Any) {
+
+        var params = LeftTicketParam()
+        params.train_date = convertDates2Str(Date())
+        
+        let successHandler = { (tickets:[QueryLeftNewDTO])->()  in
+            self.tickets = tickets
             self.tableView.reloadData()
         }
+        
+        let failureHandler = {(error:NSError)->() in
+            
+        }
+        
+        webAPI.queryTicketFlowWith(params, success: successHandler, failure: failureHandler)
     }
     
     override func viewDidLoad() {
@@ -31,6 +40,13 @@ class ItemsViewController: UITableViewController {
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+    }
+    
+    func convertDates2Str(_ date:Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")!
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
     }
     
     override func didReceiveMemoryWarning() {
