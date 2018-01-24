@@ -40,12 +40,22 @@ public class WebAPI: NSObject {
         context.evaluateScript(jsContent)
     }
     
-    public func queryTicketFlow() -> [QueryLeftNewDTO]? {
-        let queryTicket = context.objectForKeyedSubscript("queryTicketFlow")
-        if let tickets = queryTicket?.call(withArguments: []).toArray() as? [QueryLeftNewDTO] {
-            return tickets
+    public func queryTicketFlowWith(_ params:LeftTicketParam,success:@escaping ([QueryLeftNewDTO])->Void,failure:@escaping (NSError)->Void) {
+        guard let queryTicketFunc = context.objectForKeyedSubscript("queryTicketFlow") else {
+            //TODO call error
+            return
         }
         
-        return nil
+        let paramStr = params.ToGetParams()
+        DispatchQueue.global().async {
+            if let tickets = queryTicketFunc.call(withArguments: [paramStr]).toArray() as? [QueryLeftNewDTO] {
+                DispatchQueue.main.async {
+                    success(tickets)
+                }
+            }
+            else {
+                //TODO call error
+            }
+        }
     }
 }

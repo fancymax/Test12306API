@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1116983B2018A182007A7B23 /* LeftTicketParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1116983A2018A182007A7B23 /* LeftTicketParam.swift */; };
+		1116983C2018A182007A7B23 /* LeftTicketParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1116983A2018A182007A7B23 /* LeftTicketParam.swift */; };
 		111C4AC62015B13C00722075 /* WebAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1140B01A2015918900C623B9 /* WebAPI.framework */; };
 		111C4AC72015B15400722075 /* WebAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1140B01A2015918900C623B9 /* WebAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		111C4AC92015B92600722075 /* QueryLeftNewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C4AC82015B92600722075 /* QueryLeftNewDTO.swift */; };
@@ -64,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1116983A2018A182007A7B23 /* LeftTicketParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTicketParam.swift; sourceTree = "<group>"; };
 		111C4AC82015B92600722075 /* QueryLeftNewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLeftNewDTO.swift; sourceTree = "<group>"; };
 		1140B0042015913200C623B9 /* Test12306ForMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test12306ForMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1140B0072015913200C623B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 			children = (
 				1140B038201593AD00C623B9 /* Supporting Files */,
 				11B85B442015970E00993B82 /* WebAPI.swift */,
+				1116983A2018A182007A7B23 /* LeftTicketParam.swift */,
 				111C4AC82015B92600722075 /* QueryLeftNewDTO.swift */,
 				1140B0372015922100C623B9 /* WebAPI.js */,
 				1140B0362015922100C623B9 /* XMLHTTPRequest.h */,
@@ -395,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1116983B2018A182007A7B23 /* LeftTicketParam.swift in Sources */,
 				11B85B452015970E00993B82 /* WebAPI.swift in Sources */,
 				11B85B472015977000993B82 /* XMLHTTPRequest.m in Sources */,
 				111C4AC92015B92600722075 /* QueryLeftNewDTO.swift in Sources */,
@@ -405,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1116983C2018A182007A7B23 /* LeftTicketParam.swift in Sources */,
 				116651B82017580E00428DD6 /* WebAPI.swift in Sources */,
 				116651B92017581100428DD6 /* XMLHTTPRequest.m in Sources */,
 				116651BA2017581300428DD6 /* QueryLeftNewDTO.swift in Sources */,

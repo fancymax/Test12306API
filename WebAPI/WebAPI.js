@@ -1,4 +1,7 @@
+
+
 var request = new XMLHttpRequest();
+
 
 var JSESSIONID = '';
 var route = '';
@@ -208,14 +211,8 @@ function parseTickets(result, map) {
     return cs
 }
 
-function queryTicketFlow() {
+function queryTicketFlow(params) {
     var res = leftTicket_init();
-
-    let train_date = '2018-02-13';
-    let from_station = 'SZQ';
-    let to_stationCode = 'SHH';
-    let purpose_codes = 'ADULT';
-    let params = 'leftTicketDTO.train_date=' + train_date + '&leftTicketDTO.from_station=' + from_station + '&leftTicketDTO.to_station=' + to_stationCode + '&purpose_codes=' + purpose_codes;
 
     requestDynamicJs(res.dynamicJs);
 

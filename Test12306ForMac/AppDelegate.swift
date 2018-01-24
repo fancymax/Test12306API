@@ -12,23 +12,39 @@ import WebAPI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
-    
     var webAPI:WebAPI!
-    
     var tickets: [QueryLeftNewDTO]?
 
+    @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var ticketTableView: NSTableView!
+    @IBOutlet weak var datePicker: NSDatePicker!
     
-    @IBAction func clickTest(_ sender: Any) {
-        if let webTickets = webAPI.queryTicketFlow() {
-            self.tickets = webTickets
-            ticketTableView.reloadData()
+    @IBAction func clickQueryTicket(_ sender: Any) {
+        var params = LeftTicketParam()
+        params.train_date = convertDates2Str(datePicker.dateValue)
+        
+        let successHandler = { (tickets:[QueryLeftNewDTO])->()  in
+            self.tickets = tickets
+            self.ticketTableView.reloadData()
         }
+        
+        let failureHandler = {(error:NSError)->() in
+            
+        }
+        
+        webAPI.queryTicketFlowWith(params, success: successHandler, failure: failureHandler)
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         webAPI =  WebAPI()
+        datePicker.dateValue = Date()
+    }
+    
+    func convertDates2Str(_ date:Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")!
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
     }
 }
 
